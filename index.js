@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://kimyh:abcd1234@boilercluster-q7aiw.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://kimuser:abcd1234@cluster0-yo1id.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
 }).then(() => console.log('MongoDB RUN...'))
 
@@ -33,3 +33,4 @@ app.post('/register', (reg, res) => {
  
 
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+
